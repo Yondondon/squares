@@ -1,0 +1,82 @@
+.App {
+  text-align: center;
+  padding: 20px;
+}
+
+.centredList {
+  margin: 0 auto;
+  padding: 0;
+}
+
+.centredList li {
+  list-style-type: none;
+  margin: 5px 0;
+  display: block;
+  line-height: 1;
+}
+
+.selectMode {
+  width: 200px;
+  height: 35px;
+  outline: none;
+}
+
+.startBtn {
+  border: none;
+  background-color: #0075d8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  padding: 0 15px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: bold;
+  color: #fff;
+  height: 35px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.squareRow {
+  display: flex;
+  justify-content: center;
+}
+
+.squareItem {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+
+.filledSquare {
+  background-color: #2278e2;
+}
+
+.coordList {
+  margin: 15px auto;
+  padding: 0;
+  width: 200px;
+}
+
+.coordList:empty::after {
+  content: 'List is empty';
+  font-style: italic;
+  font-size: 14px;
+}
+
+.coordList li {
+  margin: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+  background-color: #FBF8E3;
+  border: 1px solid #ddd7a6;
+  border-radius: 5px;
+}
