@@ -54,8 +54,33 @@
   cursor: pointer;
 }
 
-.filledSquare {
+.filledSquare,
+.colorPaletteItem.blue {
   background-color: #2278e2;
+}
+.filledSquare.red,
+.colorPaletteItem.red {
+  background-color: #a71717;
+}
+.filledSquare.green,
+.colorPaletteItem.green {
+  background-color: #0d6717;
+}
+.filledSquare.yellow,
+.colorPaletteItem.yellow {
+  background-color: #ccb524;
+}
+.filledSquare.orange,
+.colorPaletteItem.orange {
+  background-color: #c8552f;
+}
+.filledSquare.black,
+.colorPaletteItem.black {
+  background-color: #000;
+}
+.filledSquare.gray,
+.colorPaletteItem.gray {
+  background-color: #5e5e5e;
 }
 
 .coordList {
@@ -79,4 +104,19 @@
   background-color: #FBF8E3;
   border: 1px solid #ddd7a6;
   border-radius: 5px;
+}
+
+.colorPaletteWrap {
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+  align-items: center;
+}
+
+.colorPaletteItem {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
 }

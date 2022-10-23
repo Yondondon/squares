@@ -1,11 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
 import { Button } from './components/Button/Button';
 import { Select } from './components/Select/Select';
 import { Square } from './features/Square/Square';
 import { useAppSelector, useAppDispatch } from './config/hooks';
-import { setSize } from './features/Square/reducer';
+import { setSize } from './config/reducers/square';
 import { CoordList } from './components/CoordList/CoordList';
+import { ColorPalette } from './features/ColorPalette/ColorPalette';
 
 const options = [
   {
@@ -48,12 +49,14 @@ const App = () => {
         <li>1. Select mode.</li>
         <li>2. Press "Start".</li>
         <li>3. Click on squares.</li>
+        <li>Optional: change color.</li>
       </ul>
 
       <div style={{display: 'flex', justifyContent: 'center', margin: '15px 0' }}>
         <Select options={options} onChange={selectChage} />
         <Button text="Start" onClick={handleStartBtn} />
       </div>
+      <ColorPalette />
       <Square/>
       <h3>Filled squares</h3>
       <CoordList listItems={square.filledSquares}/>

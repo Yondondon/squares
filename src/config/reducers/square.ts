@@ -1,16 +1,18 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import type { RootState } from '../../config/store'
+import type { RootState } from '../store'
 
 // Define a type for the slice state
 interface SquareState {
   size: number,
-  filledSquares: any[]
+  filledSquares: any[],
+  color: string,
 }
 
 // Define the initial state using that type
 const initialState: SquareState = {
   size: 0,
   filledSquares: [],
+  color: 'blue',
 }
 
 export const squareSlice = createSlice({
@@ -29,10 +31,13 @@ export const squareSlice = createSlice({
     removeCoord: (state, action: PayloadAction<{id: number; column: number, row: number}>) => {
       state.filledSquares = state.filledSquares.filter(item => item.id !== action.payload.id)
     },
+    setColor: (state, action: PayloadAction<string>) => {
+      state.color = action.payload
+    }
   },
 })
 
-export const { setSize, addCoord, removeCoord } = squareSlice.actions
+export const { setSize, addCoord, removeCoord, setColor } = squareSlice.actions
 
 // Other code such as selectors can use the imported `RootState` type
 export const selectSquare = (state: RootState) => state.square

@@ -1,5 +1,5 @@
 import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit';
-import squareSlice from '../features/Square/reducer';
+import squareSlice from './reducers/square';
 
 export const store = configureStore({
   reducer: {

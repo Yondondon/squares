@@ -1,10 +1,10 @@
 import React, { FC } from 'react';
 
-type CoordListPros = {
+type CoordListProps = {
   listItems: any[];
 }
 
-export const CoordList: FC<CoordListPros> = ({ listItems }) => {
+export const CoordList: FC<CoordListProps> = ({ listItems }) => {
   return (
     <ul className="coordList">
       {listItems.map(item => {

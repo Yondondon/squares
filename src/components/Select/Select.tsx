@@ -1,11 +1,11 @@
 import React, { FC } from 'react';
 
-type SelectPros = {
+type SelectProps = {
   options: { name: string; field: number; }[] | [];
   onChange: (e: any) => void;
 }
 
-export const Select: FC<SelectPros> = ({ options, onChange }) => {
+export const Select: FC<SelectProps> = ({ options, onChange }) => {
   return (
     <select className="selectMode" onChange={onChange}>
       {options.map(option => {
